@@ -52,11 +52,12 @@
                 android:textSize="18sp"
                 android:textColor="@color/colorAccent" />
 
-            <EditText
+            <TextView
+                android:id="@+id/stname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/stname"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -75,11 +76,12 @@
                 android:textSize="18sp"
                 android:textColor="@color/colorAccent" />
 
-            <EditText
+            <TextView
+                android:id="@+id/stmedia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/stmedia"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -97,11 +99,12 @@
                 android:textSize="18sp"
                 android:textColor="@color/colorAccent" />
 
-            <EditText
+            <TextView
+                android:id="@+id/stsitu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/stsitu"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
 
         </LinearLayout>
 

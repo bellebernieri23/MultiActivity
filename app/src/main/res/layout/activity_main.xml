@@ -77,10 +77,10 @@
 
             <EditText
                 android:id="@+id/stnota1"
+                android:maxLength="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="0"
                 android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
@@ -101,10 +101,10 @@
 
             <EditText
                 android:id="@+id/stnota2"
+                android:maxLength="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="0"
                 android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
@@ -125,10 +125,10 @@
 
             <EditText
                 android:id="@+id/stfreq"
+                android:maxLength="3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="0"
                 android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
@@ -139,15 +139,15 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/stsitu"
-                android:onClick="notascal"/>
-
 
         </LinearLayout>
 
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="verifyGrade"
+        android:text="Conferir situação final" />
 </LinearLayout>
