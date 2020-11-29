@@ -148,29 +148,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/stteste"
-                android:layout_marginLeft="20dp"
-                android:textSize="18sp"
-                android:textColor="@color/colorAccent" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/stteste"
-                android:inputType="number"
-                android:textColor="@color/colorPrimary"/>
-
-        </LinearLayout>
-
 
     </LinearLayout>
 </LinearLayout>

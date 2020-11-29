@@ -14,15 +14,17 @@ public class MainActivity extends AppCompatActivity {
 
     Aluno aluno;
 
-    private EditText nome;
-    private EditText nota1;
-    private EditText nota2;
-    private EditText frequencia;
+    private EditText stname;
+    private EditText stnota1;
+    private EditText stnota2;
+    private EditText stfreq;
 
-    private String wnome;
-    private double wnota1;
-    private double wnota2;
-    private int wfrequencia;
+    private String nome;
+    private double nota1;
+    private double nota2;
+    private int frequencia;
+    private double media;
+    private String situacao;
 
 
     @Override
@@ -30,28 +32,53 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        nome = findViewById(R.id.stname);
-        wnome = nome.getText().toString();
-
-        nota1 = findViewById(R.id.stnota1);
-        wnota1 = Double.parseDouble(nota1.getText().toString());
-
-        nota2 = findViewById(R.id.stnota2);
-        wnota2 = Double.parseDouble(nota2.getText().toString());
-
-        frequencia = findViewById(R.id.stfreq);
-        wfrequencia = Integer.parseInt(frequencia.getText().toString());
-
-
-
     }
 
     public void notascal(View view) {
 
-//    Log.i("my log",nome.getText().toString());
+
+    stname = findViewById(R.id.stname);
+    stnota1 = findViewById(R.id.stnota1);
+    stnota2 = findViewById(R.id.stnota2);
+    stfreq = findViewById(R.id.stfreq);
+
+
+
+    nome = stname.getText().toString();
+    nota1 = Double.parseDouble(stnota1.getText().toString());
+    nota2 = Double.parseDouble(stnota2.getText().toString());
+    frequencia = Integer.parseInt(stfreq.getText().toString());
+
+    media = (nota1 + nota2)/2;
+
+    if (frequencia < 75)
+    {
+        situacao = "reprovado por falta";
+    } else
+    {
+        if (media < 4)
+        {
+            situacao = "reprovado por nota";
+        } else
+            {
+                if (media >= 4 && media <= 6.9)
+                {
+                    situacao = "final";
+                } else
+                    {
+                        situacao = "aprovado";
+                    }
+            }
+
+    }
+
+
+
     Intent intent = new Intent(MainActivity.this, Activity2.class);
-    intent.putExtra("wnome", wnome);
+    intent.putExtra("nome", nome);
+    intent.putExtra("media", media);
+    intent.putExtra("situacao", situacao);
+
     startActivity(intent);
 
     }
